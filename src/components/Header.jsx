@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useLocation } from "react-router-dom";
 
-const links = ['Home', 'Cart', 'Products', 'Login']
+const links = ['الرئِسيه', 'العربه', 'المنتجات', 'التسجيل']
 
 const Links = () => {
     const { pathname } = useLocation()

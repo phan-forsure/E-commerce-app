@@ -1,13 +1,16 @@
 @use 'vars.scss' as *;
+
 section.about {
     grid-area: main;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: 'txt txt img';
+
     @include query(mobile) {
         grid-template-areas: 'img img img' 'txt txt txt';
         color: white;
     }
+
     div.text {
         grid-area: txt;
         height: 75vh;
@@ -17,6 +20,7 @@ section.about {
         flex-wrap: wrap;
         align-content: center;
         background-color: #eee;
+
         @include query(mobile) {
             padding: $padding-md;
             height: 40vh;
@@ -24,6 +28,7 @@ section.about {
             justify-content: center;
             background-color: $accent-dark !important;
         }
+
         div {
             width: 100%;
             height: 75%;
@@ -31,19 +36,27 @@ section.about {
             flex-wrap: wrap;
             align-items: center;
             align-content: center;
+
             span {
                 color: $accent;
             }
+
+            h1 {
+                width: 100%;
+            }
+
             @include query(mobile) {
+
                 h1,
                 p {
-                    width: 100%;
                     text-align: center;
                 }
+
                 height: 50%;
                 justify-content: center;
             }
         }
+
         a {
             padding: $padding-sm + .5em;
             font-size: .8em;
@@ -52,11 +65,13 @@ section.about {
             cursor: pointer;
             transition: all .2s;
             color: white !important;
+
             &:hover {
                 background-color: $accent-dark;
             }
         }
     }
+
     div.background {
         overflow: hidden;
         position: relative;
@@ -66,6 +81,7 @@ section.about {
         height: 100%;
         display: flex;
         align-items: center;
+
         img {
             $d: 15em;
             width: $d;
@@ -73,18 +89,22 @@ section.about {
             position: absolute;
             opacity: .3;
         }
+
         .img-1 {
             right: 18em;
             top: 7em;
         }
+
         .img-2 {
             top: 24em;
             right: 4em;
         }
+
         .img-3 {
             left: 18em;
             bottom: 23em;
         }
+
         @include query(mobile) {
             display: none;
         }

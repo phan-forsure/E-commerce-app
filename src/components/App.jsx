@@ -29,12 +29,12 @@ export const products = {
 const App = () => {
     return (
         <div style={{animation: 'fadeIn .2s'}} className="app">
-            <Header logo='دلع كرشك'/>
+            <Header logo='مطعم النخيل'/>
             <Routes>
-                {['Home', ''].map((path) => <Route exact key={path} path={path} element={<Home />} />)}
-                <Route path='/Login' element={<Login />} />
-                <Route path='/Cart' element={<Cart />} />
-                <Route path='/Products' element={<ProductsPage />} />
+                {['الرئِسيه', ''].map((path) => <Route exact key={path} path={path} element={<Home />} />)}
+                <Route path='/التسجيل' element={<Login />} />
+                <Route path='/العربه' element={<Cart />} />
+                <Route path='/المنتجات' element={<ProductsPage />} />
             </Routes>
             <Footer />
         </div>

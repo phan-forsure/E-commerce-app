@@ -1,10 +1,13 @@
 @use '../../public/styles/vars' as *;
+
 .logo {
     padding: $padding-sm $padding-md;
     font-size: 1.1em;
     font-weight: bold;
+
     @include query(mobile) {
         padding: $padding-sm / 2 $padding-sm;
+        display: none !important;
     }
 }
 
@@ -17,12 +20,18 @@ header {
     position: sticky;
     top: 0;
     z-index: 20;
+
+    @include query(mobile) {
+        justify-content: center;
+    }
+
     ul {
         list-style: none;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         height: 100%;
+
         li {
             a {
                 opacity: .8;
@@ -33,9 +42,11 @@ header {
                 display: flex;
                 align-items: center;
                 cursor: pointer;
+
                 @include query(mobile) {
                     padding: $padding-sm / 2 $padding-sm;
                 }
+
                 &:hover {
                     opacity: 1;
                     border-bottom: 5px solid #aaa;
@@ -43,6 +54,7 @@ header {
                 }
             }
         }
+
         .active {
             opacity: 1;
             border-bottom: 5px solid #aaa;

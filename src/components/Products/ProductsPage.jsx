@@ -2,6 +2,7 @@ import React, { createContext, useState } from "react";
 import Section from "./Section";
 import Category from "./Category";
 import Products from "./Products";
+import ScrollUp from "../ScrollUp";
 
 export const valueContext = createContext(null)
 
@@ -34,6 +35,7 @@ const ProductsPage = () => {
     return (
         <>
         <valueContext.Provider value={value}>
+            <ScrollUp />
             <Section />
             <Category selection={value} setter={setValue} click={handleClick} enter={handleMouseEnterBtn}
             leave={handleMouseLeave} leaveBtn={handleMouseLeaveBtn} />

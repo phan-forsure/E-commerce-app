@@ -40,6 +40,9 @@ section.about div.text div {
 section.about div.text div span {
   color: #3d9ef8;
 }
+section.about div.text div h1 {
+  width: 100%;
+}
 @media (max-width: 767px) {
   section.about div.text div {
     height: 50%;
@@ -47,7 +50,6 @@ section.about div.text div span {
   }
   section.about div.text div h1,
   section.about div.text div p {
-    width: 100%;
     text-align: center;
   }
 }

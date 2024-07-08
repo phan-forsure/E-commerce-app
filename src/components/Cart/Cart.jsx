@@ -2,6 +2,7 @@ import React, { createContext, useEffect, useRef, useState } from "react";
 import Section from "./Section";
 import Items from "./Items";
 import Checkout from "./Checkout";
+import ScrollUp from "../ScrollUp";
 
 export const CountContext = createContext(null)
 export const FullPriceContext = createContext(null)
@@ -22,6 +23,7 @@ const Cart = () => {
 
     return (
         <>
+        <ScrollUp />
         <CountContext.Provider value={itemCount}>
             <FullPriceContext.Provider value={result}>
                 <Section />
